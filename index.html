@@ -4,12 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VO_Website</title>
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #424242;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-image {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            aspect-ratio: 16 / 9;
+            background: url('images/EvergreenStorm.jpg') no-repeat center center/cover;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(255, 255, 255);
+            font-size: 3em;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .button-box {
+            position: absolute;
+            margin-top: 20px;
+            /* Adjust as needed to place it under the image */
+            right: 20px;
+            /* Anchored to the right */
+            background-color: #444;
+            padding: 10px;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-box button {
+            background-color: #323131;
+            color: rgb(253, 253, 253);
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .button-box button:hover {
+            background-color: #004d04;
+        }
+
+        .side-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .side-panel.active {
+            transform: translateX(0);
+        }
+    </style>
+    <script>
+        function togglePanel() {
+            const panel = document.querySelector('.side-panel');
+            panel.classList.toggle('active');
+        }
+    </script>
+    </style>
 </head>
 
 <body>
+
+    <div class="header-image">
+        <div class="title">Crew Berggren Voice Acting</div>
+    </div>
+
+    <div class="contact-info">
+        <p>Contact me at:</p>
+        <p>Email: crew3b9@gmail.com</p>
+        <p>Phone: (541) 420-6180</p>
+        <p>Also available on Whatsapp</p>
+        <p>Instagram: Captain_Crew</p>
+    </div>
+    <div class="button-box">
+        <button onclick="togglePanel()">Skills and background</button>
+        <button>Recordings</button>
+    </div>
+    <div class="content-wrapper">
+        <div class="button-box">
+
+
+        </div>
+    </div>
+
+    <div class="side-panel">
+        <h2>Side Panel</h2>
+        <p>This is a panel that slides in from the left.</p>
+    </div>
+
 </body>
 
 </html>
 
-//nothing to see here?
+background: linear-gradient(to bottom, #333333, #cccccc);
