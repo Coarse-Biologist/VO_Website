@@ -71,6 +71,7 @@
             position: fixed;
             top: 0;
             left: 0;
+            overflow-y: auto;
             width: 40%;
             height: 100%;
             background-color: #444;
@@ -89,6 +90,7 @@
             position: fixed;
             top: 0;
             left: 0;
+            overflow-y: auto;
             width: 40%;
             height: 100%;
             background-color: #444;
@@ -102,17 +104,45 @@
         .side-panel2.active {
             transform: translateX(0);
         }
+
+        .side-panel3 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            width: 40%;
+            height: 100%;
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .side-panel3.active {
+            transform: translateX(0);
+        }
     </style>
     <script>
         function togglePanel() {
-            const panel = document.querySelector('.side-panel');
-            panel.classList.toggle('active');
+            const panel1 = document.querySelector('.side-panel');
+            panel1.classList.toggle('active');
+
         }
     </script>
     <script>
         function togglePanel2() {
-            const panel = document.querySelector('.side-panel2');
-            panel.classList.toggle('active');
+            const panel2 = document.querySelector('.side-panel2');
+            panel2.classList.toggle('active');
+
+        }
+    </script>
+    <script>
+        function togglePanel3() {
+            const panel3 = document.querySelector('.side-panel3');
+            panel3.classList.toggle('active');
+
         }
     </script>
     </style>
@@ -132,9 +162,11 @@
         <p>Instagram: Captain_Crew</p>
     </div>
     <div class="button-box">
-        <button onclick="togglePanel()">Skills and background</button>
+        <button onclick="togglePanel()">Skills and Background</button>
 
         <button onclick="togglePanel2()">Recordings</button>
+
+        <button onclick="togglePanel3()">Pricing Details</button>
 
     </div>
 
@@ -146,8 +178,65 @@
     </div>
 
     <div class="side-panel">
-        <h2>Skills and background</h2>
-        <p>Crew has skills? His background exists.</p>
+        <h2>Skills and Background</h2>
+
+        <p><strong>Concise list of skills:</strong></p>
+
+        <p><strong>1)</strong> Speaks English, Spanish, Portuguese, Italian, German,
+            Russian, French. </p>
+
+        <p><strong>2)</strong> Excellent variety of accents and voice control in seven languages. Perfectly capable of
+            insightful, emotionally diverse reading.</p>
+
+        <p><strong>3)</strong> Excellent knowledge and understanding of any scientific or mathematic vocabulary and
+            notation.</p>
+
+
+        <p><strong>4)</strong> Extreme passion for reproducing dialogues and monologues with different personality
+            types, feelings,
+            motivations.</p>
+
+        <p><strong>Full Background:</strong></p>
+
+        <p>Crew Berggren was born 1997, graduated high-school and attended a community college in Coos Bay Oregon, USA.
+            Taking Spanish in high-school he incidentally found it exceedingly easy to learn the language. He was
+            therefore motivated and, the summer after graduation, he decided to learn Portuguese. He felt comfortable
+            speaking, reading and understanding Portuguese before he started the fall semester at the community college
+            that year. There he focused on core sciences, taking biology, chemistry, microbiology, anatomy and
+            physiology, physics, and calculus, following a love for math and science which had also led him to volunteer
+            at the local hospital. After Portuguese he learned German over the course of a year, and to improve and
+            solidify his ability, he went to visit the German-speaking parts of Europe for two months. For some years
+            Crew taught English to Spanish and Portuguese speakers, often ones who knew absolutely no English, giving a
+            pleasant confidence and dexterity in both languages. Thereafter he wished to treat himself to another "easy"
+            language and so learned Italian over the course of half a year. All the time loving biology and literature
+            more than language, however, he spent far more time reading either biology and chemistry textbooks or
+            classic English, French and Russian novels. Inspired by the Russian novels, he struggled much more painfully
+            in effort to learn Russian with which he still now wrestles. To relieve himself of the arduous task of
+            learning Russian he played a video game in French for two months and was thereafter convinced that his
+            comprehension, vocabulary and accent in French was at least satisfactory, though grammatically weak.</p>
+
+        <p>Living situations which fortified his confidence in various languages or speaking skills:</p>
+
+        <p>1) Crew lived in Germany for two and a half years.</p>
+        <p>2) Married to a lovely German woman for 4 years.</p>
+        <p>3) Lived in Northern Italy for four months where his parents own a house.</p>
+        <p>4) Two month vacation in Portugal and two years teaching English to Brazilians.</p>
+        <p>5) Assistance with Russian speaking Ukrainian refugees in Germany, including translation assistance with
+            refugee paperwork and appointments.</p>
+        <p>6) Lived in the Dominican Republic for two months and altogether spent endless hours with Mexicans.</p>
+        <p>7) Every week for his entire life he has also attended a church meeting at which one observes or gives
+            public speeches, presentations, and demonstrations after which one is given constructive criticism based on
+            set a criterium of a particular textbook. For most of his life this was in English, for two and a half years
+            it was in Spanish, and for two other years it was in German.
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+        </p>
+        </p>
     </div>
 
     <div class="side-panel2">
@@ -160,9 +249,28 @@
             </audio>
     </div>
 
-    <div class="side-panel">
-        <h2>Audio Files</h2>
+    <div class="side-panel3">
+        <h1>Pricing:</h1>
+        <div>
+            <p><strong>Pricing Details</strong></p>
+            <p>Pricing depends on the specific requirements, preferences, and needs of each client and project.</p>
 
+            <p><strong>General Pricing:</strong></p>
+            <p>$0.25 per word for scripts over 150 words.</p>
+            <p>$0.50 per word for scripts under 150 words.</p>
+            <p>Minimum charge: $50 per project.</p>
+
+            <p><strong>Live or Directed Sessions:</strong></p>
+            <p>$80 per hour (minimum).</p>
+
+            <p><strong>Additional Charges:</strong></p>
+            <p>Any script changes, style modifications, or language/accent alterations after recording commencement may
+                incur additional per-word fees.</p>
+
+            <p><strong>Specialty in Gaming:</strong></p>
+            <p>Are you a game developer? I’m passionate about video games and would love to bring your characters and
+                projects to life. Let’s collaborate!</p>
+        </div>
 
 
 </body>
